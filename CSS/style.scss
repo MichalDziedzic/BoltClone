@@ -1,3 +1,7 @@
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+}
 header {
   display: flex;
   font-size: 16px;
@@ -28,7 +32,7 @@ section {
     font-weight: 700;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 32px;
+    padding-top: 32px;
     margin-right: 24px;
     word-break: break-word;
   }
@@ -90,6 +94,83 @@ article {
       background-color: #fff;
       box-shadow: 0 5px 12px rgba(47, 49, 63, 0.04),
         0 2px 6px rgba(47, 49, 63, 0.06), 0 1px 2px rgba(47, 49, 63, 0.05);
+    }
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    // padding: 0 24px;
+    .features-item {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      //   padding: 0 12px;
+      margin-top: 56px;
+      justify-content: space-around;
+      img {
+        max-width: 50%;
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .content {
+      max-width: 50%;
+      h3 {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+aside {
+  width: 100%;
+  .phone-block {
+    .cointainer {
+      position: relative;
+    }
+    .img-cover {
+      position: relative;
+      margin: auto;
+      width: 100%;
+      height: 126vw;
+      max-height: 749px;
+      background-image: url(../IMG/index-phone.png);
+      background-position: 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+    .TopBg-circle {
+      top: 100px;
+      right: -95px;
+      height: 150px;
+      width: 150px;
+      background-color: #d9fde5;
+      position: absolute;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .BottomBg-circle {
+      top: 176px;
+      left: -180px;
+      height: 530px;
+      width: 530px;
+      background-color: #d9fde5;
+      position: absolute;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .block-content {
+      z-index: 1;
+      position: relative;
     }
   }
 }
