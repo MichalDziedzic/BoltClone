@@ -1,7 +1,13 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../Fonts/NunitoSans-Regular.ttf);
+}
+
 .wrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  font-family: myFirstFont;
 }
 
 h3,
@@ -77,18 +83,41 @@ section .appStory {
   display: flex;
 }
 
-section img {
-  height: 60px;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-}
-
 section .bg-image {
   background-image: url(../IMG/index-header.jpg);
   width: 100%;
   background-position: 50%;
   background-size: cover;
   padding-top: 55.56%;
+}
+
+.appStory > img {
+  height: 60px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.bolt-AppStories {
+  background: #2eb875;
+  text-align: center;
+}
+
+.features .features-item,
+.bolt-services .features-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.features .content,
+.bolt-services .content {
+  max-width: 50%;
 }
 
 article .drive {
@@ -133,31 +162,14 @@ article .features {
   width: 100%;
 }
 
-article .features .features-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  margin-top: 56px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-article .features .features-item img {
+article .features img {
   max-width: 50%;
   width: 80px;
   height: 80px;
 }
 
-article .features .content {
-  max-width: 50%;
-}
-
-article .features .content h3 {
+article .features .content h3,
+article .features .content h4 {
   -webkit-margin-before: 1em;
           margin-block-start: 1em;
   -webkit-margin-after: 1em;
@@ -170,6 +182,25 @@ article .features .content h3 {
   font-size: 24px;
   line-height: 32px;
   margin: 0;
+}
+
+.bolt-services {
+  padding: 0 24px;
+}
+
+.bolt-services .features-item {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bolt-services .features-item img {
+  width: 24px;
+  height: 24px;
+  padding: 12px;
+  border-radius: 40px;
+  display: block;
+  margin-right: 24px;
 }
 
 aside {
@@ -223,5 +254,100 @@ aside .phone-block .BottomBg-circle {
 aside .phone-block .block-content {
   z-index: 1;
   position: relative;
+}
+
+aside .bolt-services .features-item img {
+  width: 24px;
+  padding: 12px;
+  border-radius: 40px;
+  background-color: #d9fde5;
+}
+
+.appStory {
+  max-width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer {
+  background-color: #f4f4f6;
+  padding: 0 12px;
+  padding-bottom: 40px;
+}
+
+footer .footer-section {
+  padding-top: 40px;
+}
+
+footer .language-switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer-nav h5 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+  color: #2f313f;
+}
+
+.footer-nav .aboutUs {
+  padding-bottom: 40px;
+}
+
+.footer-nav .products,
+.footer-nav .aboutUs {
+  margin-top: 48px;
+}
+
+.products > ul {
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.products > ul > li,
+.aboutUs > ul > li {
+  margin-top: 24px;
+}
+
+.social > .policy {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.social > .policy a {
+  margin-top: 24px;
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

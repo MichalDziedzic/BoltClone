@@ -1,6 +1,11 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../Fonts/NunitoSans-Regular.ttf);
+}
 .wrapper {
   box-sizing: border-box;
   width: 100%;
+  font-family: myFirstFont;
 }
 h3,
 h4 {
@@ -54,10 +59,7 @@ section {
     flex-direction: column;
     display: flex;
   }
-  img {
-    height: 60px;
-    object-fit: scale-down;
-  }
+
   .bg-image {
     background-image: url(../IMG/index-header.jpg);
     width: 100%;
@@ -67,6 +69,27 @@ section {
   }
 }
 
+.appStory > img {
+  height: 60px;
+  object-fit: scale-down;
+}
+
+.bolt-AppStories {
+  background: #2eb875;
+  text-align: center;
+}
+
+.features,
+.bolt-services {
+  .features-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .content {
+    max-width: 50%;
+  }
+}
 article {
   .drive {
     width: 100%;
@@ -97,29 +120,21 @@ article {
         0 2px 6px rgba(47, 49, 63, 0.06), 0 1px 2px rgba(47, 49, 63, 0.05);
     }
   }
+
   .features {
     display: flex;
     flex-direction: column;
     width: 100%;
 
-    // padding: 0 24px;
-    .features-item {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-
-      //   padding: 0 12px;
-      margin-top: 56px;
-      justify-content: space-around;
-      img {
-        max-width: 50%;
-        width: 80px;
-        height: 80px;
-      }
-    }
-    .content {
+    img {
       max-width: 50%;
-      h3 {
+      width: 80px;
+      height: 80px;
+    }
+
+    .content {
+      h3,
+      h4 {
         margin-block-start: 1em;
         margin-block-end: 1em;
         margin-inline-start: 0px;
@@ -132,7 +147,20 @@ article {
     }
   }
 }
-
+.bolt-services {
+  padding: 0 24px;
+  .features-item {
+    justify-content: center;
+    img {
+      width: 24px;
+      height: 24px;
+      padding: 12px;
+      border-radius: 40px;
+      display: block;
+      margin-right: 24px;
+    }
+  }
+}
 aside {
   width: 100%;
   .phone-block {
@@ -141,6 +169,7 @@ aside {
       position: relative;
       padding: 0;
     }
+
     .img-cover {
       position: relative;
       margin: auto;
@@ -176,6 +205,77 @@ aside {
     .block-content {
       z-index: 1;
       position: relative;
+    }
+  }
+  .bolt-services {
+    .features-item {
+      img {
+        width: 24px;
+        padding: 12px;
+        border-radius: 40px;
+        background-color: #d9fde5;
+      }
+    }
+  }
+}
+.appStory {
+  max-width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+footer {
+  background-color: #f4f4f6;
+  padding: 0 12px;
+  padding-bottom: 40px;
+  .footer-section {
+    padding-top: 40px;
+  }
+  .language-switcher {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.footer-nav {
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0;
+    color: #2f313f;
+  }
+  .aboutUs {
+    padding-bottom: 40px;
+  }
+  .products,
+  .aboutUs {
+    margin-top: 48px;
+  }
+}
+.products > ul {
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.products > ul > li,
+.aboutUs > ul > li {
+  margin-top: 24px;
+}
+.social > {
+  .policy {
+    margin-top: 24px;
+    text-align: center;
+    a {
+      margin-top: 24px;
+      display: block;
     }
   }
 }
