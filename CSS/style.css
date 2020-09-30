@@ -218,6 +218,7 @@ section .appStory {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 30px;
 }
 
 section .bg-image {
