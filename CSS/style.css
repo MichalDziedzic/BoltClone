@@ -3,6 +3,11 @@
   src: url(../Fonts/NunitoSans-Regular.ttf);
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .wrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,11 +15,30 @@
   font-family: myFirstFont;
 }
 
+h2 {
+  font-size: 34px;
+  line-height: 40px;
+  margin: 0;
+  font-weight: 900;
+}
+
+p {
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+}
+
 h3,
 h4 {
   font-size: 24px;
   line-height: 32px;
   margin: 0;
+  font-weight: 900;
 }
 
 header {
@@ -100,6 +124,22 @@ section .bg-image {
 .bolt-AppStories {
   background: #2eb875;
   text-align: center;
+  color: #f4f4f6;
+}
+
+.bolt-AppStories a {
+  color: #f4f4f6;
+  text-decoration: underline;
+}
+
+.bolt-AppStories p {
+  margin-top: 16px;
+  padding-bottom: 40px;
+}
+
+.bolt-AppStories h2 {
+  margin-top: 40px;
+  padding-top: 40px;
 }
 
 .features .features-item,
@@ -113,6 +153,7 @@ section .bg-image {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-top: 56px;
 }
 
 .features .content,
@@ -120,18 +161,28 @@ section .bg-image {
   max-width: 50%;
 }
 
+.features .content p,
+.bolt-services .content p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 article .drive {
   width: 100%;
   background-color: #6675ff;
   color: white;
   text-align: center;
-  padding-bottom: 32px;
-  padding-top: 24px;
+}
+
+article .drive .block-content {
+  margin-bottom: 32px;
+  padding: 24px 24px 32px 24px;
 }
 
 article .drive p {
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 16px;
 }
 
 article .drive button {
@@ -254,6 +305,24 @@ aside .phone-block .BottomBg-circle {
 aside .phone-block .block-content {
   z-index: 1;
   position: relative;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 80px;
+}
+
+aside .phone-block .block-content p {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+aside .bolt-services .features-item {
+  margin-top: 16px;
+}
+
+aside .bolt-services .features-item .content p {
+  margin-bottom: 16px;
+  margin-top: 8px;
+  line-height: 24px;
 }
 
 aside .bolt-services .features-item img {
@@ -298,6 +367,10 @@ footer .language-switcher {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-top: 24px;
 }
 
 footer .social-media {
@@ -308,8 +381,13 @@ footer .social-media {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .social-media img {
+  padding-left: 15px;
 }
 
 .footer-nav h5 {
@@ -349,5 +427,290 @@ footer .social-media {
 .social > .policy a {
   margin-top: 24px;
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  article .features .features-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 33.33333%;
+    max-width: 480px;
+  }
+  article .features .features-item img {
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+  }
+  article .features .features-item .content {
+    margin: 0 auto;
+  }
+  article > .features,
+  .bolt-services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .footer-section {
+    width: 50%;
+  }
+  .footer-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 50%;
+    width: 50%;
+  }
+  .footer-nav .products,
+  .footer-nav .aboutUs {
+    width: 50%;
+  }
+  .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 80px;
+  }
+  .social .policy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0;
+  }
+  .social .policy a {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  aside .bolt-services {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  aside .bolt-services .features-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  aside .bolt-AppStories .appStory {
+    margin-top: 32px;
+  }
+  aside .bolt-AppStories p {
+    padding-top: 36px;
+  }
+  aside .bolt-AppStories h2 {
+    font-size: 48px;
+    line-height: 56px;
+    padding-top: 100px;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.navigation {
+  display: none;
+}
+
+@media screen and (min-width: 450px) {
+  .appStory {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  aside .phone-block .cointainer .img-cover {
+    position: absolute;
+    top: -235px;
+    right: 20px;
+    width: 769px;
+    max-width: 55%;
+    height: 749px;
+  }
+  article .drive .block-content {
+    padding-top: 84px;
+    padding-bottom: 84px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  article .drive .block-content div {
+    margin-right: 150px;
+  }
+  article .features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  section {
+    min-height: 770px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
+  section .appStory {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section div {
+    width: 50%;
+  }
+  section .block-content h1 {
+    margin-top: 176px;
+    font-size: 72px;
+    line-height: 80px;
+    margin-right: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .navigation {
+    display: block;
+  }
+  .navigation ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .navigation ul li {
+    font-size: 18px;
+    line-height: 27px;
+    padding: 26px 16px 27px;
+  }
+  header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 180px;
+  }
+  header nav {
+    padding: 0;
+  }
+  .TopBg-circle,
+  .BottomBg-circle {
+    display: none;
+  }
+  aside .phone-block {
+    display: contents;
+    max-width: 1200px;
+  }
+  aside .phone-block .block-content {
+    margin-top: 236px;
+    padding-top: 140px;
+    position: relative;
+    padding-bottom: 175px;
+    background-color: #d9fde5;
+    padding-left: 150px;
+    text-align: center;
+  }
+  aside .phone-block .block-content h2,
+  aside .phone-block .block-content p {
+    width: 50%;
+  }
+  aside .bolt-AppStories p,
+  aside .bolt-AppStories span {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  aside .bolt-AppStories p {
+    padding-bottom: 100px;
+  }
+  aside .bolt-AppStories h2 {
+    font-size: 48px;
+    line-height: 56px;
+    padding-top: 100px;
+    color: white;
+    font-weight: bold;
+  }
+  .footer-section {
+    padding-left: 150px;
+  }
+  .footer-section .appStory {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: -35px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,16 +2,34 @@
   font-family: myFirstFont;
   src: url(../Fonts/NunitoSans-Regular.ttf);
 }
+a {
+  text-decoration: none;
+  color: #000;
+}
 .wrapper {
   box-sizing: border-box;
   width: 100%;
   font-family: myFirstFont;
 }
+h2 {
+  font-size: 34px;
+  line-height: 40px;
+  margin: 0;
+  font-weight: 900;
+}
+p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 h3,
 h4 {
   font-size: 24px;
   line-height: 32px;
   margin: 0;
+  font-weight: 900;
 }
 header {
   display: flex;
@@ -19,6 +37,9 @@ header {
   line-height: 24px;
   flex-direction: row;
   justify-content: space-between;
+  // .navigation {
+  //   display: none;
+  // }
   nav {
     padding: 28px 24px;
   }
@@ -77,6 +98,20 @@ section {
 .bolt-AppStories {
   background: #2eb875;
   text-align: center;
+  color: #f4f4f6;
+  a {
+    color: #f4f4f6;
+    text-decoration: underline;
+  }
+
+  p {
+    margin-top: 16px;
+    padding-bottom: 40px;
+  }
+  h2 {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
 }
 
 .features,
@@ -85,9 +120,14 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 56px;
   }
   .content {
     max-width: 50%;
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }
 article {
@@ -96,12 +136,16 @@ article {
     background-color: #6675ff;
     color: white;
     text-align: center;
-    padding-bottom: 32px;
-    padding-top: 24px;
+
+    .block-content {
+      margin-bottom: 32px;
+      padding: 24px 24px 32px 24px;
+    }
 
     p {
       font-size: 16px;
       line-height: 24px;
+      margin-bottom: 16px;
     }
     button {
       display: inline-block;
@@ -205,10 +249,25 @@ aside {
     .block-content {
       z-index: 1;
       position: relative;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin-bottom: 80px;
+      p {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
     }
   }
   .bolt-services {
     .features-item {
+      margin-top: 16px;
+      .content {
+        p {
+          margin-bottom: 16px;
+          margin-top: 8px;
+          line-height: 24px;
+        }
+      }
       img {
         width: 24px;
         padding: 12px;
@@ -235,11 +294,18 @@ footer {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-top: 24px;
   }
   .social-media {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    img {
+      padding-left: 15px;
+    }
   }
 }
 .footer-nav {
@@ -276,6 +342,241 @@ footer {
     a {
       margin-top: 24px;
       display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  article {
+    .features {
+      .features-item {
+        display: flex;
+        flex-direction: column;
+        width: 33.33333%;
+        max-width: 480px;
+
+        img {
+          margin: 0 auto;
+          width: 140px;
+          height: 140px;
+        }
+        .content {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  article > .features,
+  .bolt-services {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .footer-section {
+    width: 50%;
+  }
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+    width: 50%;
+    .products,
+    .aboutUs {
+      width: 50%;
+    }
+  }
+  .social {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-top: 80px;
+    .policy {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      a {
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+  aside {
+    .bolt-services {
+      justify-content: center;
+      .features-item {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .bolt-AppStories {
+      .appStory {
+        margin-top: 32px;
+      }
+      p {
+        padding-top: 36px;
+      }
+      h2 {
+        font-size: 48px;
+        line-height: 56px;
+        padding-top: 100px;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.navigation {
+  display: none;
+}
+
+@media screen and (min-width: 450px) {
+  .appStory {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 960px) {
+  aside {
+    .phone-block {
+      .cointainer {
+        .img-cover {
+          position: absolute;
+          top: -235px;
+          right: 20px;
+          width: 769px;
+          max-width: 55%;
+          height: 749px;
+        }
+      }
+    }
+  }
+  article {
+    .drive {
+      .block-content {
+        padding-top: 84px;
+        padding-bottom: 84px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        div {
+          margin-right: 150px;
+        }
+      }
+    }
+    .features {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+    }
+  }
+
+  section {
+    min-height: 770px;
+    display: flex;
+    padding: 0;
+    .appStory {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    div {
+      width: 50%;
+    }
+    .block-content {
+      h1 {
+        margin-top: 176px;
+        font-size: 72px;
+        line-height: 80px;
+        margin-right: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+      }
+    }
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .navigation {
+    display: block;
+    ul {
+      display: flex;
+      flex-direction: row;
+      li {
+        font-size: 18px;
+        line-height: 27px;
+        padding: 26px 16px 27px;
+      }
+    }
+  }
+  header {
+    justify-content: flex-start;
+    padding-left: 180px;
+    nav {
+      padding: 0;
+    }
+  }
+  .TopBg-circle,
+  .BottomBg-circle {
+    display: none;
+  }
+
+  aside {
+    .phone-block {
+      display: contents;
+      max-width: 1200px;
+
+      .block-content {
+        margin-top: 236px;
+        padding-top: 140px;
+        position: relative;
+        padding-bottom: 175px;
+        background-color: #d9fde5;
+        padding-left: 150px;
+        text-align: center;
+
+        h2,
+        p {
+          width: 50%;
+        }
+      }
+    }
+
+    .bolt-AppStories {
+      p,
+      span {
+        font-size: 18px;
+        line-height: 27px;
+      }
+      p {
+        padding-bottom: 100px;
+      }
+      h2 {
+        font-size: 48px;
+        line-height: 56px;
+        padding-top: 100px;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+  .footer-section {
+    padding-left: 150px;
+    .appStory {
+      display: flex;
+      flex-direction: row;
+      margin-left: -35px;
+      justify-content: flex-start;
     }
   }
 }
